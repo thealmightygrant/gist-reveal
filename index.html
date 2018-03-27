@@ -39,6 +39,26 @@
         box-shadow: none;
         background: transparent;
       }
+      .reveal .future .callouts {
+        opacity: 0;
+      }
+      .reveal .past .callouts {
+        opacity: 0;
+      }
+      .reveal .present .callouts {
+        opacity: 1;
+      }
+      .reveal .callouts {
+        top: -20px;
+        left: -240px;
+        position: fixed;
+        font-weight: bolder;
+        padding: 12px;
+        line-height: 1.0;
+        color: #1C425B;
+        background-color: white;
+        transition: opacity 2s ease-in 1s;
+      }
       body.print-pdf .reveal .callouts {display:none; !important}
       @media print {
         .reveal .callouts {display:none; !important}
@@ -87,8 +107,6 @@
 			<div class="slides">
       {{slides}}
       </div>
-      <a id='logo-link' class='callouts' href="{{template_logo_url}}"><img id="logo-link" alt="{{template_logo_text}}" data-src="{{template_logo_img}}" /></a>
-      <a id='gist-link' class='callouts' href="{{template_gist_url}}"><img id="gist-link" alt="{{template_gist_text}}" data-src="{{template_gist_img}}" /></a>
 
 		</div>
 
